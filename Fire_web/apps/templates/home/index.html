@@ -1,0 +1,488 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="container-fluid py-4">
+
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Temperature</p>
+                    <h5 class="font-weight-bolder mb-0">
+                      25.6 °C
+                      <span class="text-success text-sm font-weight-bolder">+0.2°C</span>
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                    <i src="{{ config.ASSETS_ROOT }}/img/jjw/sunny.jpg" aria-hidden="true"></i>
+                    <img src="{{ config.ASSETS_ROOT }}/img/jjw/temp.webp" class="navbar-brand-img h-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Humidity</p>
+                    <h5 class="font-weight-bolder mb-0">
+                      27.8%
+                      <span class="text-success text-sm font-weight-bolder">+0.1%</span>
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                    <i class="{{ config.ASSETS_ROOT }}/img/jjw/water.png" aria-hidden="true"></i>
+                    <img src="{{ config.ASSETS_ROOT }}/img/jjw/water.png" class="navbar-brand-img h-100">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Air quality</p>
+                    <h5 class="font-weight-bolder mb-0">
+                      618ppm
+                      <span class="text-danger text-sm font-weight-bolder">-2ppm</span>
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                    <i class="{{ config.ASSETS_ROOT }}/img/jjw/air.png" aria-hidden="true"></i>
+                    <img src="{{ config.ASSETS_ROOT }}/img/jjw/air.png" class="navbar-brand-img h-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Illuminance</p>
+                    <h5 class="font-weight-bolder mb-0">
+                      28.3 lux
+                      <span class="text-success text-sm font-weight-bolder">+0.2 lux</span>
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                    <i class="{{ config.ASSETS_ROOT }}/img/jjw/light.png" aria-hidden="true"></i>
+                    <img src="{{ config.ASSETS_ROOT }}/img/jjw/light.png" class="navbar-brand-img h-100">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-7 mb-lg-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="d-flex flex-column h-100">
+                    <h5 class="font-weight-bolder" style="font-size:30px">Fire stage</h5>
+                    <p class="mb-5" > </p>
+                      <p><b>Level 1 (Low Risk)</b></p>
+                      <p><b>Level 2 (Medium Risk)</b></p>
+                      <p><b>Level 3 (High Risk)</b></p>
+                      <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
+                        <p style= "color:orange;"><b style="font-size:30px" > Level 1 stage </b></p>
+                      </a>
+                  </div>
+                </div>
+                <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                  <div class="bg-gradient-primary border-radius-lg h-100">
+                    <img src="{{ config.ASSETS_ROOT }}/img/shapes/waves-white.svg" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
+                    <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                      <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/fire.png" height="300" alt="rocket">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="col-lg-5">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <div class="bg-gradient-dark border-radius-lg py-3 pe-1 mb-3">
+                <div class="chart">
+                  <canvas id="chart-bars" class="chart-canvas" height="150"></canvas>
+                </div>
+              </div>
+              <h6 class="ms-2 mt-4 mb-0"> Floating population
+              </h6>
+              <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <hr>
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/금남.png" >
+              <h6 class="ms-2 mt-4 mb-0"> 금남공원
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/제일은행.png">
+              <h6 class="ms-2 mt-4 mb-0"> SC제일은행
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/우리은행.png">
+              <h6 class="ms-2 mt-4 mb-0"> 우리은행
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/흥국화재.png">
+              <h6 class="ms-2 mt-4 mb-0"> 흥국화재
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/전일빌딩.png">
+              <h6 class="ms-2 mt-4 mb-0"> 전일빌딩
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/nh투자증권.png">
+              <h6 class="ms-2 mt-4 mb-0"> NH투자증권
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/기록관.png">
+              <h6 class="ms-2 mt-4 mb-0"> 5.18 민주화운동 기록관
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/네이버.png">
+              <h6 class="ms-2 mt-4 mb-0"> 네이버 파트너스퀘어
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5_1">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/실증센터.png">
+              <h6 class="ms-2 mt-4 mb-0"> 무인로봇 실증센터
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5_2">
+        <div class="card h-100 p-3">
+          <div class="card z-index-2">
+            <div class="card-body p-3">
+              <img class="w-100 position-relative z-index-2 pt-4" src="{{ config.ASSETS_ROOT }}/img/jjw/map.png" >
+              <h6 class="ms-2 mt-4 mb-0"> Map
+              </h6>
+              <div class="container border-radius-lg">              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+    <script>
+    // 모달 대신 confirm 함수 사용
+    function showConfirm() {
+      var result = confirm('화재발생!! 화재발생!!');
+      if (result) {
+        // 사용자가 '확인'을 클릭하면 지정된 라우트로 리디렉션
+        window.location.href = "/fire_event"; // Flask 라우트 경로
+      }
+    }
+    
+    // 페이지 로드 후 5초 후에 confirm 대화 상자 보여주기
+    setTimeout(showConfirm, 5000);
+    </script>
+
+  <script src="{{ config.ASSETS_ROOT }}/js/plugins/chartjs.min.js"></script>
+  <script>
+    var ctx = document.getElementById("chart-bars").getContext("2d");
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+          label: "Sales",
+          tension: 0.4,
+          borderWidth: 0,
+          borderRadius: 4,
+          borderSkipped: false,
+          backgroundColor: "#fff",
+          data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
+          maxBarThickness: 6
+        }, ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+            },
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 500,
+              beginAtZero: true,
+              padding: 15,
+              font: {
+                size: 14,
+                family: "Open Sans",
+                style: 'normal',
+                lineHeight: 2
+              },
+              color: "#fff"
+            },
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false
+            },
+            ticks: {
+              display: false
+            },
+          },
+        },
+      },
+    });
+
+
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
+
+    var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke1.addColorStop(1, 'rgba(203,12,159,0.2)');
+    gradientStroke1.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+    gradientStroke1.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+
+    var gradientStroke2 = ctx2.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
+    gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+    gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
+
+    new Chart(ctx2, {
+      type: "line",
+      data: {
+        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+            label: "Mobile apps",
+            tension: 0.4,
+            borderWidth: 0,
+            pointRadius: 0,
+            borderColor: "#cb0c9f",
+            borderWidth: 3,
+            backgroundColor: gradientStroke1,
+            fill: true,
+            data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+            maxBarThickness: 6
+
+          },
+          {
+            label: "Websites",
+            tension: 0.4,
+            borderWidth: 0,
+            pointRadius: 0,
+            borderColor: "#575f9a",
+            borderWidth: 3,
+            backgroundColor: gradientStroke2,
+            fill: true,
+            data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+            maxBarThickness: 6
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              padding: 10,
+              color: '#b2b9bf',
+              font: {
+                size: 11,
+                family: "Open Sans",
+                style: 'normal',
+                lineHeight: 2
+              },
+            }
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#b2b9bf',
+              padding: 20,
+              font: {
+                size: 11,
+                family: "Open Sans",
+                style: 'normal',
+                lineHeight: 2
+              },
+            }
+          },
+        },
+      },
+    });
+  </script>
+
+{% endblock javascripts %}
